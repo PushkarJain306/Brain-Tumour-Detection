@@ -95,7 +95,7 @@ def preprocess_image(img_path, img_size=(128, 128)):
     img = np.expand_dims(img, axis=0)
     return img
 
-new_image = preprocess_image(r"C:\Image_Recog_and_Classification\image2.jpg")
+new_image = preprocess_image(r"C:\Image_Recog_and_Classification\image.jpeg")
 
 prediction = model.predict(new_image)
 predicted_class = label_encoder.inverse_transform([np.argmax(prediction)])
